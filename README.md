@@ -1,69 +1,67 @@
-Symfony Standard Edition
+Clastic Standard Edition
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
+Welcome to the Clastic Standard Edition - a fully-functional Clastic
 application that you can use as the skeleton for your new applications.
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+This document contains information on how to download, install, and start
+using Clastic.
 
-What's inside?
---------------
+1) Installing the Standard Edition
+----------------------------------
 
-The Symfony Standard Edition is configured with the following defaults:
+As Clastic uses [Composer][1] to manage its dependencies, the recommended way
+to create a new project is to use it.
 
-  * An AppBundle you can use to start coding;
+If you don't have Composer yet, download it following the instructions on
+http://getcomposer.org/ or just run the following command:
 
-  * Twig as the only configured template engine;
+    sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer
 
-  * Doctrine ORM/DBAL;
+Then, use the `create-project` command to generate a new Clastic application:
 
-  * Swiftmailer;
+    php composer.phar create-project clastic/standard-edition path/to/install
 
-  * Annotations enabled for everything.
+Composer will install Clastic and all its dependencies under the
+`path/to/install` directory.
 
-It comes pre-configured with the following bundles:
+2) Checking your System Configuration
+-------------------------------------
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+Before starting coding, make sure that your local system is properly
+configured for Clastic.
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+Execute the `check.php` script from the command line:
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+    php app/check.php
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+The script returns a status code of `0` if all mandatory requirements are met,
+`1` otherwise.
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+Access the `config.php` script from a browser:
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+    http://localhost/path-to-project/web/config.php
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+If you get any warnings or recommendations, fix them before moving on.
 
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
+3) Browsing the Demo Application
+--------------------------------
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+Congratulations! You're now ready to use Clastic.
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+Run the internal server:
 
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
+   app/console server:run
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
+You can access your freshly installed backend at
+
+    http://127.0.0.1:8000/admin/
+
+4) Getting started with Clastic
+-------------------------------
+
+TODO
 
 Enjoy!
 
-[1]:  http://symfony.com/doc/2.6/book/installation.html
-[6]:  http://symfony.com/doc/2.6/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.6/book/doctrine.html
-[8]:  http://symfony.com/doc/2.6/book/templating.html
-[9]:  http://symfony.com/doc/2.6/book/security.html
-[10]: http://symfony.com/doc/2.6/cookbook/email.html
-[11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+[1]:  http://getcomposer.org/

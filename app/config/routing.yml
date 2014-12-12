@@ -1,3 +1,7 @@
+clastic_backoffice:
+    resource: "@ClasticBackofficeBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
