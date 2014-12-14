@@ -20,7 +20,7 @@ http://getcomposer.org/ or just run the following command:
 
 Then, use the `create-project` command to generate a new Clastic application:
 
-    php composer.phar create-project clastic/standard-edition path/to/install
+    composer create-project clastic/standard-edition path/to/install
 
 Composer will install Clastic and all its dependencies under the
 `path/to/install` directory.
