@@ -22,7 +22,10 @@
         "clastic/core-bundle": "dev-master",
         "clastic/backoffice-bundle": "dev-master",
         "clastic/text-bundle": "dev-master",
-        "clastic/alias-bundle": "dev-master"
+        "clastic/alias-bundle": "dev-master",
+        "clastic/user-bundle": "dev-master",
+
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

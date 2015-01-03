@@ -16,13 +16,18 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+
             new Clastic\CoreBundle\ClasticCoreBundle(),
             new Clastic\AliasBundle\ClasticAliasBundle(),
             new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
+            new Clastic\UserBundle\ClasticUserBundle(),
 
-            new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new Clastic\TextBundle\ClasticTextBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+
             new AppBundle\AppBundle(),
         );
 
