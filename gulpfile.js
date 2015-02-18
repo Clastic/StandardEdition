@@ -11,29 +11,37 @@ var concat = require('gulp-concat'),
     less = require('gulp-less'),
     clean = require('gulp-clean'),
     livereload = require('gulp-livereload'),
-    notify = require("gulp-notify");
+    notify = require("gulp-notify"),
+    clasticNamespace = require('./vendor/clastic/core-bundle/Resources/scripts/Clastic.js');
+
+clasticNamespace();
 
 var paths = {
     'styles': {
         'app': [
-            'vendor/clastic/**/Resources/public/styles/**.less'
+            'web/vendor/multiselect/css/multi-select.css',
+            'vendor/clastic/*/Resources/public/styles/**.less',
+            'vendor/clastic/*/Resources/public/styles/*/*.less'
         ],
-        'main': 'vendor/clastic/**/Resources/public/styles/style.less'
+        'main': 'vendor/clastic/*/Resources/public/styles/style.less'
     },
     'scripts': {
         'vendor': [
-            'web/vendor/jquery/dist/jquery.js',
-            'web/vendor/bootstrap/dist/js/bootstrap.js',
-            'web/vendor/mousetrap/mousetrap.js',
+            'vendor/clastic/*/Resources/public/scripts/**.config.js',
             'http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js'
         ],
         'app': [
-            'vendor/clastic/**/Resources/public/scripts/**.js'
+            'vendor/clastic/*/Resources/public/scripts/**.js'
         ]
     },
     'templates': 'src/**/*.twig',
     'build': 'web/build/'
 };
+
+var clastic = new Clastic.Clastic();
+
+var rootDir = __dirname + '/vendor/clastic';
+paths = clastic.resolvePaths(paths, rootDir);
 
 var errorHandler = notify.onError(function (err) {
     return "Error: " + err.message;
@@ -66,7 +74,7 @@ gulp.task('scripts:vendor', function() {
     gulp.src(paths.scripts.vendor)
         .pipe(concat('vendor.js'))
         //.pipe(stripDebug())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename('vendor.min.js'))
         .pipe(gulp.dest(paths.build))
         .pipe(filesize());

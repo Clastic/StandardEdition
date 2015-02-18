@@ -9,10 +9,9 @@
   "dependencies": {
     "bootstrap": "~3.3.1",
     "fontawesome": "~4.2.0",
-    "mousetrap": "~1.4.6",
-    "multiselect": "~0.9.12",
-    "quicksearch": "~2.0.5",
-    "ckeditor": "~4.4.6",
-    "jquery-slugify": "~1.0.4"
+    "clastic_backoffice": "./vendor/clastic/backoffice-bundle/bower.json",
+    "clastic_menu": "./vendor/clastic/menu-bundle/bower.json",
+    "clastic_alias": "./vendor/clastic/alias-bundle/bower.json",
+    "clastic_media": "./vendor/clastic/media-bundle/bower.json"
   }
 }

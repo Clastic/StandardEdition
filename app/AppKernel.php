@@ -17,18 +17,46 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-            new Clastic\CoreBundle\ClasticCoreBundle(),
-            new Clastic\AliasBundle\ClasticAliasBundle(),
-            new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
-            new Clastic\UserBundle\ClasticUserBundle(),
+//            new Clastic\CoreBundle\ClasticCoreBundle(),
+//            new Clastic\NodeBundle\ClasticNodeBundle(),
+//            new Clastic\AliasBundle\ClasticAliasBundle(),
+//            new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
+//            new Clastic\UserBundle\ClasticUserBundle(),
+//            new Clastic\MenuBundle\ClasticMenuBundle(),
+//            new Clastic\TextBundle\ClasticTextBundle(),
+//
+//            new FOS\UserBundle\FOSUserBundle(),
+//            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+//            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
+//            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+//            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+//
+            new AppBundle\AppBundle(),
 
-            new FOS\UserBundle\FOSUserBundle(),
-            new Clastic\TextBundle\ClasticTextBundle(),
+
+            new Clastic\CoreBundle\ClasticCoreBundle(),
+
+            new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
-            new AppBundle\AppBundle(),
+            new Clastic\AliasBundle\ClasticAliasBundle(),
+
+            new Clastic\TextBundle\ClasticTextBundle(),
+
+            new FOS\UserBundle\FOSUserBundle(),
+            new Clastic\UserBundle\ClasticUserBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Clastic\NodeBundle\ClasticNodeBundle(),
+
+            new Clastic\MenuBundle\ClasticMenuBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Clastic\BlogBundle\ClasticBlogBundle(),
+//            new Demo\Bundle\DemoBundle(),
+            new Clastic\FrontBundle\ClasticFrontBundle(),
+            new Clastic\MediaBundle\ClasticMediaBundle(),
+            new \Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
+            new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

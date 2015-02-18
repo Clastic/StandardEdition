@@ -24,6 +24,12 @@
         "clastic/text-bundle": "dev-master",
         "clastic/alias-bundle": "dev-master",
         "clastic/user-bundle": "dev-master",
+        "clastic/front-bundle": "dev-master",
+        "clastic/menu-bundle": "dev-master",
+        "clastic/node-bundle": "dev-master",
+        "clastic/media-bundle": "dev-master",
+        "clastic/blog-bundle": "dev-master",
+        "clastic/taxonomy-bundle": "dev-master",
 
         "friendsofsymfony/user-bundle": "~2.0@dev"
     },
