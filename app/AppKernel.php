@@ -55,7 +55,8 @@ class AppKernel extends Kernel
 //            new Demo\Bundle\DemoBundle(),
             new Clastic\FrontBundle\ClasticFrontBundle(),
             new Clastic\MediaBundle\ClasticMediaBundle(),
-            new \Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
+            new Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
+            new \Clastic\BlockBundle\ClasticBlockBundle(),
             new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
         );
 
