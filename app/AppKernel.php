@@ -56,7 +56,7 @@ class AppKernel extends Kernel
             new Clastic\FrontBundle\ClasticFrontBundle(),
             new Clastic\MediaBundle\ClasticMediaBundle(),
             new Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
-            new \Clastic\BlockBundle\ClasticBlockBundle(),
+            new Clastic\BlockBundle\ClasticBlockBundle(),
             new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
         );
 
@@ -65,6 +65,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Clastic\GeneratorBundle\ClasticGeneratorBundle();
         }
 
         return $bundles;
