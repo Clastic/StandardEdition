@@ -1,7 +1,7 @@
 install:
 	mkdir -p -m 777 web/uploads
 	composer install
-	npm install --production
+	npm install
 	bower install
 	app/console assets:install
 	gulp build
@@ -12,7 +12,7 @@ install:
 
 update:
 	composer install
-	npm install --production
+	npm install
 	bower install
 	app/console assets:install
 	gulp build
