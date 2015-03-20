@@ -17,7 +17,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-strip-debug": "^1.0.2",
     "gulp-uglify": "^1.0.1",
-    "gulp-notify": "^2.0.1"
+    "gulp-notify": "^2.0.1",
     "lodash": "~2.4.1"
   },
   "license": "MIT"
