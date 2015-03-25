@@ -101,7 +101,7 @@ gulp.task('styles:app', function() {
         .pipe(less())
         .on('error', errorHandler)
         .pipe(concat('app.css'))
-        .pipe(cmq({log: true}))
+        //.pipe(cmq({log: true}))
         .pipe(autoprefix('last 1 versions'))
         .pipe(minifyCSS({
             keepSpecialComments: 0
