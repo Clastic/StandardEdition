@@ -5,6 +5,7 @@ var concat = require('gulp-concat'),
     stripDebug = require('gulp-strip-debug'),
     uglify = require('gulp-uglify'),
     autoprefix = require('gulp-autoprefixer'),
+    cmq = require('gulp-combine-media-queries'),
     minifyCSS = require('gulp-minify-css'),
     filesize = require('gulp-filesize'),
     rename = require('gulp-rename'),
@@ -74,8 +75,8 @@ gulp.task('scripts', ['scripts:vendor', 'scripts:app']);
 gulp.task('scripts:vendor', function() {
     gulp.src(paths.scripts.vendor)
         .pipe(concat('vendor.js'))
-        //.pipe(stripDebug())
-        //.pipe(uglify())
+        .pipe(stripDebug())
+        .pipe(uglify())
         .pipe(rename('vendor.min.js'))
         .pipe(gulp.dest(paths.build))
         .pipe(filesize());
@@ -84,7 +85,7 @@ gulp.task('scripts:vendor', function() {
 gulp.task('scripts:app', function() {
     gulp.src(paths.scripts.app)
         .pipe(concat('app.js'))
-        //.pipe(stripDebug())
+        .pipe(stripDebug())
         .pipe(uglify())
         .on('error', errorHandler)
         .pipe(rename('app.min.js'))
@@ -100,7 +101,8 @@ gulp.task('styles:app', function() {
         .pipe(less())
         .on('error', errorHandler)
         .pipe(concat('app.css'))
-        .pipe(autoprefix('last 2 versions'))
+        .pipe(cmq({log: true}))
+        .pipe(autoprefix('last 1 versions'))
         .pipe(minifyCSS({
             keepSpecialComments: 0
         }))
