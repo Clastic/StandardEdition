@@ -32,6 +32,8 @@
         "clastic/taxonomy-bundle": "dev-master",
         "clastic/block-bundle": "dev-master",
 
+        "clastic/security-bundle": "dev-master",
+
         "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "require-dev": {
@@ -62,7 +64,8 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "component-dir": "web/assets"
     },
     "extra": {
         "symfony-app-dir": "app",

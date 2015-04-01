@@ -8,6 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            // Standard symfony
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -17,47 +18,29 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-//            new Clastic\CoreBundle\ClasticCoreBundle(),
-//            new Clastic\NodeBundle\ClasticNodeBundle(),
-//            new Clastic\AliasBundle\ClasticAliasBundle(),
-//            new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
-//            new Clastic\UserBundle\ClasticUserBundle(),
-//            new Clastic\MenuBundle\ClasticMenuBundle(),
-//            new Clastic\TextBundle\ClasticTextBundle(),
-//
-//            new FOS\UserBundle\FOSUserBundle(),
-//            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-//            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
-//            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-//            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-//
-            new AppBundle\AppBundle(),
-
-
+            // Clastic Bundles
             new Clastic\CoreBundle\ClasticCoreBundle(),
-
+                new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Clastic\BackofficeBundle\ClasticBackofficeBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
-
+                new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+                new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
+                new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
             new Clastic\AliasBundle\ClasticAliasBundle(),
-
             new Clastic\TextBundle\ClasticTextBundle(),
-
-            new FOS\UserBundle\FOSUserBundle(),
             new Clastic\UserBundle\ClasticUserBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+                new FOS\UserBundle\FOSUserBundle(),
             new Clastic\NodeBundle\ClasticNodeBundle(),
-
             new Clastic\MenuBundle\ClasticMenuBundle(),
-            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+                new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Clastic\BlogBundle\ClasticBlogBundle(),
-//            new Demo\Bundle\DemoBundle(),
-            new Clastic\FrontBundle\ClasticFrontBundle(),
             new Clastic\MediaBundle\ClasticMediaBundle(),
+                new FM\ElfinderBundle\FMElfinderBundle(),
             new Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
             new Clastic\BlockBundle\ClasticBlockBundle(),
-            new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
+            new Clastic\FrontBundle\ClasticFrontBundle(),
+
+            // Your project
+            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

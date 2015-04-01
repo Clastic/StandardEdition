@@ -5,7 +5,6 @@ var concat = require('gulp-concat'),
     stripDebug = require('gulp-strip-debug'),
     uglify = require('gulp-uglify'),
     autoprefix = require('gulp-autoprefixer'),
-    cmq = require('gulp-combine-media-queries'),
     minifyCSS = require('gulp-minify-css'),
     filesize = require('gulp-filesize'),
     rename = require('gulp-rename'),
@@ -101,7 +100,6 @@ gulp.task('styles:app', function() {
         .pipe(less())
         .on('error', errorHandler)
         .pipe(concat('app.css'))
-        //.pipe(cmq({log: true}))
         .pipe(autoprefix('last 1 versions'))
         .pipe(minifyCSS({
             keepSpecialComments: 0
