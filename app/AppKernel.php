@@ -38,6 +38,7 @@ class AppKernel extends Kernel
             new Clastic\TaxonomyBundle\ClasticTaxonomyBundle(),
             new Clastic\BlockBundle\ClasticBlockBundle(),
             new Clastic\FrontBundle\ClasticFrontBundle(),
+            new Clastic\SecurityBundle\ClasticSecurityBundle(),
 
             // Your project
             new AppBundle\AppBundle(),
