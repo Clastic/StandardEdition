@@ -2,6 +2,7 @@
 /web/vendor/
 /web/build/
 /web/uploads/*
+/web/assets/*
 !/web/uploads/.gitkeep
 /app/bootstrap.php.cache
 /app/cache/*
